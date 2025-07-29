@@ -35,8 +35,9 @@ I obtained my category IDs from: https://docs.foursquare.com/data-products/docs/
 ## Results
 Based on the coverage of API in my area, I was not able to find a strong evidence in my statsmodel with p values (except for Bar/Restaurent) being relatively larger than α
 
-                            OLS Regression Results                            
-==============================================================================
+### OLS Regression Results
+
+```
 Dep. Variable:             free_bikes   R-squared:                       0.068
 Model:                            OLS   Adj. R-squared:                  0.063
 Method:                 Least Squares   F-statistic:                     13.63
@@ -44,8 +45,8 @@ Date:                Tue, 29 Jul 2025   Prob (F-statistic):           7.45e-13
 Time:                        10:43:41   Log-Likelihood:                -3115.4
 No. Observations:                 937   AIC:                             6243.
 Df Residuals:                     931   BIC:                             6272.
-Df Model:                           5                                         
-Covariance Type:            nonrobust                                         
+Df Model:                           5   
+Covariance Type:            nonrobust   
 ==================================================================================
                      coef    std err          t      P>|t|      [0.025      0.975]
 ----------------------------------------------------------------------------------
@@ -61,11 +62,13 @@ Prob(Omnibus):                  0.000   Jarque-Bera (JB):              611.852
 Skew:                           1.366   Prob(JB):                    1.37e-133
 Kurtosis:                       5.865   Cond. No.                         195.
 ==============================================================================
+```
 
 However, Poisson regression seemed to respond better showing correlation with Bar/Restaurent and Park
 
- Generalized Linear Model Regression Results                  
-==============================================================================
+### Generalized Linear Model Regression Results
+
+```
 Dep. Variable:             free_bikes   No. Observations:                  937
 Model:                            GLM   Df Residuals:                      931
 Model Family:                 Poisson   Df Model:                            5
@@ -85,6 +88,7 @@ Restaurant             -0.0134      0.034     -0.390      0.697      -0.081     
 Park                    0.1153      0.035      3.287      0.001       0.047       0.184
 Other                  -0.0367      0.038     -0.967      0.334      -0.111       0.038
 =======================================================================================
+```
 
 
 
